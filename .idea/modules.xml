@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/krazykotlin.iml" filepath="$PROJECT_DIR$/.idea/modules/krazykotlin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/krazykotlin_main.iml" filepath="$PROJECT_DIR$/.idea/modules/krazykotlin_main.iml" group="krazykotlin" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/krazykotlin_test.iml" filepath="$PROJECT_DIR$/.idea/modules/krazykotlin_test.iml" group="krazykotlin" />
+    </modules>
+  </component>
+</project>
