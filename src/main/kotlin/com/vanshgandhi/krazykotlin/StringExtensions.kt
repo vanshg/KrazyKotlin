@@ -37,6 +37,3 @@ fun String.camelCased() : String {
     return split.joinToString("")
 }
 
-fun String.camelize() {
-    this = camelCased()
-}
