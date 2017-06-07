@@ -1,4 +1,5 @@
 # KrazyKotlin
 A collection of useful Kotlin Extension
 
-https://github.com/SwifterSwift/SwifterSwift
+
+Inspiration from https://github.com/SwifterSwift/SwifterSwift
