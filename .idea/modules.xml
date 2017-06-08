@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/krazykotlin.iml" filepath="$PROJECT_DIR$/.idea/modules/krazykotlin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/KrazyKotlin.iml" filepath="$PROJECT_DIR$/.idea/modules/KrazyKotlin.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/krazykotlin_main.iml" filepath="$PROJECT_DIR$/.idea/modules/krazykotlin_main.iml" group="krazykotlin" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/krazykotlin_test.iml" filepath="$PROJECT_DIR$/.idea/modules/krazykotlin_test.iml" group="krazykotlin" />
     </modules>
