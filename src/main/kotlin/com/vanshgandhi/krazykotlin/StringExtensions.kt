@@ -73,3 +73,15 @@ val String.isUrl get() = try {
 } catch (e: MalformedURLException) {
     false
 }
+
+/**
+ * If there is more than one most common character, this returns the character that occurred first in the String
+ */
+val String.mostCommonCharacter: Char? get() {
+    if (length == 0) return null
+    val map = HashMap<Char, Int>()
+    for (char in toCharArray()) map.put(char, (map[char] ?: 0) + 1)
+    var maxEntry = map.entries.elementAt(0)
+    for (entry in map) maxEntry = if (entry.value > maxEntry.value) entry else maxEntry
+    return maxEntry.key
+}

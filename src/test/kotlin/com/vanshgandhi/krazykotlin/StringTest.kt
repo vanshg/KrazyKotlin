@@ -79,4 +79,10 @@ class StringTest {
         assertFalse("Hello, world".isUrl)
         assertFalse("".isUrl)
     }
+
+    @Test fun testMostCommon() {
+        assertEquals("Vansh Gandhi reeeeeeeeeeeeeeeeeeeeeeeeeeeeee".mostCommonCharacter, 'e')
+        assertEquals("abbbaa".mostCommonCharacter, 'a')
+        assertNull("".mostCommonCharacter)
+    }
 }
