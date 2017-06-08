@@ -12,7 +12,7 @@ import java.util.*
 /**
  * Using UTF-8 encoding
  */
-fun String.base64Decoded() = try {
+val String.base64Decoded get() = try {
     String(Base64.getDecoder().decode(toByteArray()))
 } catch (e: IllegalArgumentException) {
     null
@@ -21,53 +21,54 @@ fun String.base64Decoded() = try {
 /**
  * Using UTF-8 encoding
  */
-fun String.base64Encoded() = Base64.getEncoder().encodeToString(toByteArray())
+val String.base64Encoded: String get() = Base64.getEncoder().encodeToString(toByteArray())
 
 /**
  * Splits by spaces, newlines, and tabs only
  */
-fun String.camelCased(): String {
-    val split = toLowerCase().split(' ', '\n', '\t').toMutableList()
-    if (split.size > 1) {
-        for (i in 1..split.size - 1) {
-            if (split[i].length > 1) {
-                val charArray = split[i].toCharArray()
-                charArray[0] = charArray[0].toUpperCase()
-                split[i] = String(charArray)
+val String.camelCased: String
+    get() {
+        val split = toLowerCase().split(' ', '\n', '\t').toMutableList()
+        if (split.size > 1) {
+            for (i in 1..split.size - 1) {
+                if (split[i].length > 1) {
+                    val charArray = split[i].toCharArray()
+                    charArray[0] = charArray[0].toUpperCase()
+                    split[i] = String(charArray)
+                }
             }
         }
+        return split.joinToString("")
     }
-    return split.joinToString("")
-}
 
-fun String.containsLetters() = matches(".*[a-zA-Z].*".toRegex())
+val String.containsLetters get() = matches(".*[a-zA-Z].*".toRegex())
 
-fun String.containsNumbers() = matches(".*[0-9].*".toRegex())
+val String.containsNumbers get() = matches(".*[0-9].*".toRegex())
 
 /**
  * Does not allow whitespace or symbols
  * Allows empty string
  */
-fun String.isAlphanumeric() = matches("^[a-zA-Z0-9]*$".toRegex())
+val String.isAlphanumeric get() = matches("^[a-zA-Z0-9]*$".toRegex())
 
 /**
  * Does not allow whitespace or symbols
  * Allows empty string
  */
-fun String.isAlphabetic() = matches("^[a-zA-Z]*$".toRegex())
+val String.isAlphabetic get() = matches("^[a-zA-Z]*$".toRegex())
 
 /**
  * Does not allow whitespace or symbols
  * Allows empty string
  */
-fun String.isNumeric() = matches("^[0-9]*$".toRegex())
+val String.isNumeric get() = matches("^[0-9]*$".toRegex())
 
-fun String.isEmail() = matches("[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}".toRegex())
+val String.isEmail get() = matches("[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}".toRegex())
 
 /**
  * Only matches URLs starting with a scheme (e.g. http://, file://, ftp://, etc)
  */
-fun String.isUrl() = try {
+val String.isUrl get() = try {
     URL(this) != null
 } catch (e: MalformedURLException) {
     false
