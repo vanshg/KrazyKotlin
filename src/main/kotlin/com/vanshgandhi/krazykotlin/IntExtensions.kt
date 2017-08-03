@@ -1,5 +1,7 @@
 package com.vanshgandhi.krazykotlin
 
+import java.util.concurrent.ThreadLocalRandom
+
 /**
  * Created by Vansh Gandhi on 8/2/17.
  * All functions in this class take precedence over any prefix operator (such as negative sign)
@@ -113,4 +115,9 @@ infix fun Int.plusMinus(range: Int): IntRange {
 /** Return a range, represented as a Pair */
 infix fun Int.`±`(range: Int): IntRange {
     return plusMinus(range)
+}
+
+/** Returns a pseudorandom Int value between zero (inclusive) and max (exclusive). */
+fun Int.Companion.random(max: Int): Int {
+    return ThreadLocalRandom.current().nextInt(max)
 }
