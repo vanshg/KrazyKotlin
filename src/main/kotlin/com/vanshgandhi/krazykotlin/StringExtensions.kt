@@ -2,7 +2,6 @@ package com.vanshgandhi.krazykotlin
 
 import java.net.MalformedURLException
 import java.net.URL
-import java.nio.charset.Charset
 import java.util.*
 
 /**

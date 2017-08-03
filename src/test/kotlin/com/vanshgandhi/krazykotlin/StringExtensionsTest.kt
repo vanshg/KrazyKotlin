@@ -10,7 +10,7 @@ import kotlin.test.assertTrue
  * Created by Vansh Gandhi on 6/7/17.
  */
 
-class StringTest {
+class StringExtensionsTest {
 
     @Test fun testBase64Decode() {
         assertEquals("SGVsbG8gV29ybGQh".base64Decoded, "Hello World!")
