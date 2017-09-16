@@ -14,9 +14,4 @@ class BooleanExtensionsTest {
         assertEquals(true.intValue, 1)
         assertEquals(false.intValue, 0)
     }
-
-    @Test fun testToggled() {
-//        assertFalse(true.toggled)
-//        assertTrue(false.toggled)
-    }
 }
