@@ -32,9 +32,15 @@ val Date.isTomorrow: Boolean
                 tomorrow.get(Calendar.DAY_OF_YEAR) == calendar.get(Calendar.DAY_OF_YEAR)
     }
 
-val Date.isWeekend: Boolean get() { return day == Calendar.SUNDAY || day == Calendar.SATURDAY }
+val Date.isWeekend: Boolean
+    get() {
+        return day == Calendar.SUNDAY || day == Calendar.SATURDAY
+    }
 
-val Date.isWeekday: Boolean get() { return !isWeekend }
+val Date.isWeekday: Boolean
+    get() {
+        return !isWeekend
+    }
 
 val Date.iso8601: String
     get() {
@@ -74,11 +80,21 @@ fun Date.roundToHour() {
     seconds = 0
 }
 
+fun Date.millisecondsSince(date: Date) = (time - date.time)
+fun Date.secondsSince(date: Date): Double = millisecondsSince(date) / 1000.0
+fun Date.minutesSince(date: Date): Double = secondsSince(date) / 60
+fun Date.hoursSince(date: Date): Double = minutesSince(date) / 60
+fun Date.daysSince(date: Date): Double = hoursSince(date) / 24
+fun Date.weeksSince(date: Date): Double = daysSince(date) / 7
+fun Date.monthsSince(date: Date): Double = weeksSince(date) / 4
+fun Date.yearsSince(date: Date): Double = monthsSince(date) / 12
 
 fun Date.plus(calendarField: Int, amount: Int, modify: Boolean = false): Date {
     // This can't be replaced with the calendar field
     val cal = calendar.apply { add(calendarField, amount) }
-    if (modify) { calendar = cal }
+    if (modify) {
+        calendar = cal
+    }
     return cal.time
 }
 
