@@ -1,6 +1,6 @@
 # ![](logo.png)
 
-A collection of useful Kotlin Extension - inspired by [SwifterSwift](https://github.com/SwifterSwift/SwifterSwift).
+KrazyKotlin is a collection of useful Kotlin Extension - inspired by [SwifterSwift](https://github.com/SwifterSwift/SwifterSwift).
 
 More extensions are on the way. If you have any requests, create an issue or submit a PR
 
