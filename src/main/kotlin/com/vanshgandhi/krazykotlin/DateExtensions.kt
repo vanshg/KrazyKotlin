@@ -34,7 +34,9 @@ val Date.isTomorrow: Boolean
 
 val Date.isWeekend: Boolean
     get() {
-        return day == Calendar.SUNDAY || day == Calendar.SATURDAY
+        println(calendar.get(Calendar.DAY_OF_WEEK))
+        return calendar.get(Calendar.DAY_OF_WEEK) == Calendar.SUNDAY ||
+                calendar.get(Calendar.DAY_OF_WEEK) == Calendar.SATURDAY
     }
 
 val Date.isWeekday: Boolean
@@ -44,7 +46,7 @@ val Date.isWeekday: Boolean
 
 val Date.iso8601: String
     get() {
-        val format = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS")
+        val format = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'")
         format.timeZone = TimeZone.getTimeZone("UTC")
         return format.format(this)
     }
