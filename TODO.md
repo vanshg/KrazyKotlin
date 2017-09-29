@@ -1,4 +1,3 @@
-- Upload to jCenter/Bintray
 - Document all extension functions, and their behaviors (either in Wiki or README)
 # String:
 - containsEmoji
