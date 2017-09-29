@@ -30,7 +30,7 @@ def pomConfig = {
     licenses {
         license {
             name "The MIT License"
-            url "https://opensource.org/licenses/MIT"
+            url gitUrl + "/blob/master/LICENSE"
             distribution "repo"
         }
     }
