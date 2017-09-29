@@ -32,17 +32,18 @@ val Date.isTomorrow: Boolean
                 tomorrow.get(Calendar.DAY_OF_YEAR) == calendar.get(Calendar.DAY_OF_YEAR)
     }
 
-val Date.isWeekend: Boolean
-    get() {
-        println(calendar.get(Calendar.DAY_OF_WEEK))
-        return calendar.get(Calendar.DAY_OF_WEEK) == Calendar.SUNDAY ||
-                calendar.get(Calendar.DAY_OF_WEEK) == Calendar.SATURDAY
-    }
-
-val Date.isWeekday: Boolean
-    get() {
-        return !isWeekend
-    }
+// TODO: Fix
+//val Date.isWeekend: Boolean
+//    get() {
+//        println(calendar.get(Calendar.DAY_OF_WEEK))
+//        return calendar.get(Calendar.DAY_OF_WEEK) == Calendar.SUNDAY ||
+//                calendar.get(Calendar.DAY_OF_WEEK) == Calendar.SATURDAY
+//    }
+//
+//val Date.isWeekday: Boolean
+//    get() {
+//        return !isWeekend
+//    }
 
 val Date.iso8601: String
     get() {
