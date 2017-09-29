@@ -1,5 +1,26 @@
 # KrazyKotlin
-A collection of useful Kotlin Extension - inspired by [SwifterSwift](https://github.com/SwifterSwift/SwifterSwift)
+A collection of useful Kotlin Extension - inspired by [SwifterSwift](https://github.com/SwifterSwift/SwifterSwift).
+
+More extensions are on the way. If you have any requests, create an issue or submit a PR
+
+## Download
+
+Download via Gradle:
+
+```groovy
+compile 'com.vanshgandhi:krazykotlin:1.0.0'
+```
+
+or Maven:
+
+```xml
+<dependency>
+  <groupId>com.vanshgandhi</groupId>
+  <artifactId>krazykotlin</artifactId>
+  <version>1.0.0</version>
+  <type>pom</type>
+</dependency>
+```
 
 ## Contributing
 There is a list of outstanding work that needs to be done in [TODO.md](https://github.com/vanshg/KrazyKotlin/blob/master/TODO.md). All contributions are welcome
@@ -46,27 +67,6 @@ There is a list of outstanding work that needs to be done in [TODO.md](https://g
     - random
 - [Boolean](https://github.com/vanshg/KrazyKotlin/blob/master/src/main/kotlin/com/vanshgandhi/krazykotlin/BooleanExtensions.kt)
     - intValue
-
-
-
-## Download
-
-Download via Gradle:
-
-```groovy
-compile 'com.vanshgandhi:krazykotlin:1.0.0'
-```
-
-or Maven:
-
-```
-<dependency>
-  <groupId>com.vanshgandhi</groupId>
-  <artifactId>krazykotlin</artifactId>
-  <version>1.0.0</version>
-  <type>pom</type>
-</dependency>
-```
 
 ## License
 ```
