@@ -1,6 +1,3 @@
-group 'com.vanshgandhi'
-version '1.0'
-
 buildscript {
     ext.kotlin_version = '1.1.51'
 
@@ -12,10 +9,97 @@ buildscript {
     }
 }
 
+plugins {
+    id "com.jfrog.bintray" version "1.7.3"
+}
+
+def gitUrl = "https://github.com/vanshg/KrazyKotlin"
+def libVersion = '1.0.0'
+group 'com.vanshgandhi'
+version libVersion
+
 apply plugin: 'kotlin'
+apply plugin: 'maven-publish'
 
 repositories {
     mavenCentral()
+}
+
+// Create the pom configuration:
+def pomConfig = {
+    licenses {
+        license {
+            name "The MIT License"
+            url "https://opensource.org/licenses/MIT"
+            distribution "repo"
+        }
+    }
+    developers {
+        developer {
+            id "vanshg"
+            name "Vansh Gandhi"
+            email "vansh.gandhi@gmail.com"
+        }
+    }
+
+    scm {
+        url gitUrl
+    }
+}
+
+// Create the publication with the pom configuration:
+publishing {
+    publications {
+        BintrayPublication(MavenPublication) {
+            from components.java
+            artifact sourcesJar
+            artifact javadocJar
+            groupId group
+            artifactId 'krazykotlin'
+            version libVersion
+            pom.withXml {
+                def root = asNode()
+                root.appendNode('description', 'A collection of useful Kotlin Extension')
+                root.appendNode('name', 'KrazyKotlin')
+                root.appendNode('url', gitUrl)
+                root.children().last() + pomConfig
+            }
+        }
+    }
+}
+
+bintray {
+    user = bintray_user // defined in global gradle.properites (~/.gradle/gradle.properties)
+    key = bintray_api_key // defined in global gradle.properites (~/.gradle/gradle.properties)
+    publications = ['BintrayPublication']
+    pkg {
+        repo = 'maven'
+        name = 'KrazyKotlin'
+        licenses = ['MIT']
+        vcsUrl = gitUrl + '.git'
+        issueTrackerUrl = gitUrl + '/issues'
+        githubRepo = 'vanshg/KrazyKotlin'
+        githubReleaseNotesFile = 'README.md'
+        websiteUrl = gitUrl
+        labels = ['kotlin', 'utilities', 'extension']
+        version {
+            name = libVersion
+            desc = 'A collection of useful Kotlin Extension'
+            released = new Date()
+            vcsTag = libVersion
+            attributes = ['gradle-plugin': 'com.vanshgandhi.krazykotlin']
+        }
+    }
+}
+
+task sourcesJar(type: Jar, dependsOn: classes) {
+    classifier = 'sources'
+    from sourceSets.main.allSource
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
 }
 
 dependencies {
