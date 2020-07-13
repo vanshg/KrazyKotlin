@@ -1,4 +1,4 @@
-package com.vanshgandhi.krazykotlin
+package com.vanshgandhi.krazykotlin.core
 
 import java.text.SimpleDateFormat
 import java.util.*
@@ -7,11 +7,14 @@ import java.util.*
  * Created by Vansh Gandhi on 8/5/17.
  */
 
-var Date.calendar: Calendar
-    get() = Calendar.getInstance().apply { time = this@calendar }
-    set(value) {
-        time = value.timeInMillis
-    }
+//var Date.calendar: Calendar
+//    get() = Calendar.getInstance().apply { time = this@calendar }
+//    set(value) {
+//        time = value.timeInMillis
+//    }
+
+val Date.calendar: Calendar
+    get() = Calendar.getInstance().apply { timeInMillis = this@calendar.time }
 
 val Date.isInFuture get() = this > Date()
 

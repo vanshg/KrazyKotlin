@@ -1,4 +1,4 @@
-package com.vanshgandhi.krazykotlin
+package com.vanshgandhi.krazykotlin.core
 
 import org.junit.Test
 import org.junit.Assert.assertEquals

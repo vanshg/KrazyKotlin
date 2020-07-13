@@ -1,2 +1,4 @@
 rootProject.name = 'krazykotlin'
+include 'android'
+include 'core'
 

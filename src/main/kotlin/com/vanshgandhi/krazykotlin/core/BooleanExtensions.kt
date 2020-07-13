@@ -1,4 +1,4 @@
-package com.vanshgandhi.krazykotlin
+package com.vanshgandhi.krazykotlin.core
 
 /**
  * Created by Vansh Gandhi on 6/8/17.

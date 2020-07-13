@@ -2,6 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/android.iml" filepath="$PROJECT_DIR$/.idea/modules/android.iml" group="android" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/android/android_main.iml" filepath="$PROJECT_DIR$/.idea/modules/android/android_main.iml" group="android" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/android/android_test.iml" filepath="$PROJECT_DIR$/.idea/modules/android/android_test.iml" group="android" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core.iml" filepath="$PROJECT_DIR$/.idea/modules/core.iml" group="core" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/core_main.iml" filepath="$PROJECT_DIR$/.idea/modules/core/core_main.iml" group="core" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/core_test.iml" filepath="$PROJECT_DIR$/.idea/modules/core/core_test.iml" group="core" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/krazykotlin.iml" filepath="$PROJECT_DIR$/.idea/modules/krazykotlin.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/krazykotlin_main.iml" filepath="$PROJECT_DIR$/.idea/modules/krazykotlin_main.iml" group="krazykotlin" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/krazykotlin_test.iml" filepath="$PROJECT_DIR$/.idea/modules/krazykotlin_test.iml" group="krazykotlin" />

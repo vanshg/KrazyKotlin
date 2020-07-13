@@ -1,4 +1,4 @@
-package com.vanshgandhi.krazykotlin
+package com.vanshgandhi.krazykotlin.core
 
 import java.net.MalformedURLException
 import java.net.URL

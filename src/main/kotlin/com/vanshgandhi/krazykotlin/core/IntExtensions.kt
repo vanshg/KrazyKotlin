@@ -1,4 +1,4 @@
-package com.vanshgandhi.krazykotlin
+package com.vanshgandhi.krazykotlin.core
 
 import java.util.concurrent.ThreadLocalRandom
 
@@ -89,7 +89,8 @@ fun Int.gcd(n: Int): Int {
 
 /** Returns the LCM of this integer and n */
 fun Int.lcm(n: Int): Int {
-    return (this * n).abs / gcd(n)
+    return (this / this.gcd(n) * n).abs
+//    return (this * n).abs / gcd(n)
 }
 
 /** Returns this integer raised to the passed in integer */
